@@ -13,12 +13,9 @@ import {
 import {
   incrementAsync,
   increment,
-  cancelIncrementAsync,
   countdownTerminated,
   INCREMENT_ASYNC,
-  INCREMENT,
-  CANCEL_INCREMENT_ASYNC,
-  COUNTDOWN_TERMINATED
+  CANCEL_INCREMENT_ASYNC
 } from '../actions';
 
 export const countdown = secs => {
