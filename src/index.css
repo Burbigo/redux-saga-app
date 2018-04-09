@@ -1,5 +1,32 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  font-size: 16px
+}
+
+.Counter {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%,-25%);
+}
+.counter-content {
+  border: 2px solid gray;
+  padding: 2rem;
+}
+
+.counter-info {
+  text-align: center;
+}
+
+.sync-controls,
+.async-controls {
+  width: 100%;
+}
+
+.sync-controls button {
+  width: 50%;
+  margin: 1rem 0;
+}
+
+.async-controls button {
+  width: 100%;
 }

@@ -18,28 +18,35 @@ const Counter = ({
     cancelIncrementAsync
 }) => {
     return (
-        <div>
-            Clicked: {counter} times
-            <button onClick={() => increment()}>
-                +
+        <div className="Counter">
+            <h1>Redux saga Counter</h1>
+            <div className="counter-content">
+                <p className="counter-info">Clicked: {counter} times</p>
+                <div className="sync-controls">
+                    <button onClick={() => increment()}>
+                        Increment
             </button>
-            <button onClick={() => decrement()}>
-                -
+                    <button onClick={() => decrement()}>
+                        Decrement
             </button>
-            <button
-                onClick={
-                    countdown ?
-                        () => cancelIncrementAsync() :
-                        () => incrementAsync(5)
-                }
-                style={{ color: countdown ? '#f00' : '#000' }}
-            >
-                {
-                    countdown ?
-                        `Cancel increment (${countdown})` :
-                        'increment after 5s'
-                }
-            </button>
+                </div>
+                <div className="async-controls">
+                    <button
+                        onClick={
+                            countdown ?
+                                () => cancelIncrementAsync() :
+                                () => incrementAsync(5)
+                        }
+                        style={{ color: countdown ? '#f00' : '#000' }}
+                    >
+                        {
+                            countdown ?
+                                `Cancel increment (${countdown})` :
+                                'Increment after 5s'
+                        }
+                    </button>
+                </div>
+            </div>
         </div>
     )
 }

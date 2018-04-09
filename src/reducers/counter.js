@@ -7,7 +7,6 @@ import {
 } from '../actions';
 
 export const countdown = (state = 0, action) => {
-  console.log(action.type)
   switch (action.type) {
     case INCREMENT_ASYNC:
       return action.payload
